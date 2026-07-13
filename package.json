@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "clone-tabnews",
   "version": "1.0.0",
@@ -14,3 +15,24 @@
     "react-dom": "^18.2.0"
   }
 }
+||||||| 3f12954
+=======
+{
+  "name": "clone-tabnews",
+  "version": "1.0.0",
+  "description": "Um projeto do 0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
+>>>>>>> b10841ab60b31cf0ea875aa9c5aef19ba80a0c41
