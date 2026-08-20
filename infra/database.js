@@ -24,7 +24,7 @@ async function query(queryObject) {
     console.error("Erro ao conectar ou consultar o banco de dados:", error);
     throw error;
   } finally {
-    // await client.end();
+    await client.end();
   }
 }
 
