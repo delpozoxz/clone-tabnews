@@ -1,10 +1,15 @@
+import database from "infra/database.js";
+
+beforeAll(CleanDataBase)
+
+async function CleanDataBase() {
+  await database.query("drop schema public cascade; create schema public;");
+}
+
 test("GET to /api/v1/migrations should return 200", async () => {
   const response = await fetch("http://localhost:3000/api/v1/migrations");
   expect(response.status).toBe(200);
   const responseBody = await response.json();
-  expect(responseBody.updated_at).toBeDefined();
-
-  const parsedUpdatedAt = new Date(responseBody.updated_at).toISOString();
-  expect(responseBody.updated_at).toEqual(parsedUpdatedAt);
-  expect(responseBody.dependencies.database.active_users).toEqual(1);
+  expect(Array.isArray(responseBody)).toBe(true);
+  expect(responseBody.length).toBeGreaterThan(0);
 });
