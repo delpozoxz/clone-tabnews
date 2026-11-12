@@ -2,17 +2,6 @@
 
 exports.shorthands = undefined;
 
-exports.up = (pgm) => {
-  pgm.createTable("test_table", {
-    id: "id",
-    created_at: {
-      type: "timestamptz",
-      notNull: true,
-      default: pgm.func("now()"),
-    },
-  });
-};
+exports.up = (pgm) => {};
 
-exports.down = (pgm) => {
-  pgm.dropTable("test_table");
-};
+exports.down = (pgm) => {};
